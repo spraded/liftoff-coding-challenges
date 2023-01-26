@@ -1,0 +1,15 @@
+function LongestWord(sen) { 
+   let arr = sen.split(" ");
+   let longest = "";
+   for(i=0; i<arr.length; i++) {
+       arr[i] = arr[i].replace(/[^0-9a-z]/gi, '');
+       if(arr[i].length>longest.length) {
+           longest = arr[i];
+       }
+   }
+  return longest; 
+         
+}
+   
+// keep this function call here 
+console.log(LongestWord(readline()));
